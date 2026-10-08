@@ -288,8 +288,6 @@ body{background:var(--bg)}
 .project-card,.essay-excerpt,.experience-list article,.reading-list li{background:var(--panel);border-color:#bdb5a8}
 .project-card-featured,.experience-list article:last-child{border-color:#bdb5a8}
 .project-card:hover{box-shadow:0 7px 20px #3d30200a}
-.experience-list .institution.science{width:1.8rem;height:2.5rem}
-.experience-list .salon-note{margin-top:5px!important}
 .cover{background:#eee9de}
 .project-card-featured{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);column-gap:21px}
 .project-card-featured>.featured-label,.project-card-featured>.card-top,.project-card-featured>.card-desc,.project-card-featured>.card-summary{grid-column:2}
