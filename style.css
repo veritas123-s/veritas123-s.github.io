@@ -270,3 +270,6 @@ html,body,body *{color:#000!important;font-family:'Times New Roman','SimSun','So
 }
 
 .card-summary{font-size:1rem;line-height:1.85;margin:0 0 17px}.abstract-label{font-size:.8125rem;font-weight:600;display:block;margin-bottom:6px}.project-card-featured .card-desc{margin:6px 0 13px;font-size:.9375rem}
+
+.hero-interests{margin-top:17px;scroll-margin-top:90px}.hero-interests h2{font-size:.875rem;font-weight:600;line-height:1.5;margin-bottom:8px;letter-spacing:0}.hero-interests .interest-list{grid-template-columns:repeat(3,minmax(0,1fr));gap:5px 20px;margin:0;font-size:.9375rem;line-height:1.75}.hero .profile-links{margin-top:16px}
+@media(max-width:760px){.hero-interests .interest-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 16px}.hero-interests{margin-top:16px}}
