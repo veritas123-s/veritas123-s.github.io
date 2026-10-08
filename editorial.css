@@ -4,3 +4,5 @@
 .brand-logo,.institution img,.role-logo,.hospital-logo,.cover-medstack img{mix-blend-mode:multiply;background:transparent}
 .experience-list .institution.science{width:1.8rem;height:2.5rem}
 .experience-list .salon-note{margin-top:5px!important}
+.logo-filters{position:absolute;inline-size:0;block-size:0;pointer-events:none}
+.institution.school img{filter:url("#logo-white-transparent");mix-blend-mode:normal}
