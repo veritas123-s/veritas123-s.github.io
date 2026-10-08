@@ -269,10 +269,4 @@ html,body,body *{color:#000!important;font-family:'Times New Roman','SimSun','So
   .role-list .institution.science{width:1.2rem;height:1.65rem}.institution.medtrix{width:6.2rem;height:1.5rem}.club-note{gap:10px;margin:6px 0}
 }
 
-/* The principal essay leads the archive. */
-.project-card-featured{grid-column:span 2;background:#fff;border-color:#aeb6bd}.featured-label{margin:0 0 12px;font-size:.75rem;letter-spacing:.8px}.project-card-featured .card-title{font-size:1.8rem;font-weight:500;line-height:1.5}.project-card-featured .card-desc{font-size:1rem;line-height:1.85;margin:10px 0 22px}.project-card-featured .card-top{align-items:center}
-.interest-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 30px;list-style:none;padding:0;margin:0 0 16px;font-size:1rem;line-height:1.7}.about-copy>p{font-size:.9375rem;line-height:1.85;margin:7px 0 0}
-.topbar{padding:14px 0}.hero{padding:25px 0 28px;gap:35px;grid-template-columns:1fr 185px}.portrait{height:240px}.section{padding:22px 0 26px}.section-top{margin-bottom:15px}.filters{margin-bottom:15px}.project-grid{gap:12px}.project-card{padding:15px 17px;min-height:145px}.cover{height:112px;margin:-15px -17px 13px}.card-desc{margin-bottom:11px}.research-participation{margin-top:10px!important}.essay-excerpt{padding-top:15px}.essay-meta{margin-top:10px}.experience-list article{padding-bottom:12px;margin-bottom:14px}.reading-list li{padding-top:10px}.reading-list{gap:18px}
-@media(max-width:760px){.hero{grid-template-columns:1fr 150px;gap:25px;padding:26px 0}.portrait{height:205px}.section{padding:21px 0 24px}.project-card-featured{grid-column:span 1}.project-card-featured .card-title{font-size:1.6rem}.interest-list{gap:9px 20px}}
-@media(max-width:520px){.hero{grid-template-columns:1fr}.portrait{width:115px;height:150px;top:26px}.hero-text .affiliation{margin-top:88px}.project-card{padding:15px 17px}.cover{margin:-15px -17px 13px}.interest-list{grid-template-columns:1fr;gap:7px}.project-card-featured .card-title{font-size:1.5rem}.experience-list article{padding-bottom:14px;margin-bottom:14px}}
-@media(max-width:380px){.portrait{width:105px;height:145px}}
+.card-summary{font-size:1rem;line-height:1.85;margin:0 0 17px}.abstract-label{font-size:.8125rem;font-weight:600;display:block;margin-bottom:6px}.project-card-featured .card-desc{margin:6px 0 13px;font-size:.9375rem}
