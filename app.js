@@ -145,7 +145,7 @@ const projects = [
     "status": "研究与学习",
     "cover": "research",
     "description": "眼科学、风湿免疫学与核医学之间的交叉探索。",
-    "intro": "九院眼科科研见习，正参与一项大学生创新训练项目。关注临床问题与研究证据之间的联系。",
+    "intro": "九院眼科科研见习，主持一项大学生创新训练项目。关注临床问题与研究证据之间的联系。",
     "work": [
       "眼科学、风湿免疫学与核医学的交叉学习。",
       "临床问题、研究方法与证据框架的梳理。"
@@ -402,7 +402,7 @@ const projects = [
 projects.sort((a,b)=>Number(a.number)-Number(b.number));
 const grid=document.getElementById('project-grid');
 const escapeHTML=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function renderCover(p){if(p.id==='medtrix')return `<span class="institution medtrix project-mark"><img src="assets/medtrix-logo.png" alt="Medtrix 社团标识" width="1254" height="1254" loading="lazy"></span>`;if(p.cover==='medstack')return `<div class="cover cover-medstack"><img src="assets/medstack.png" alt="Medstack 标志" width="65" height="65" loading="lazy"><div><span class="cover-title">Medstack</span><div class="cover-sub">个人工作台</div></div></div>`;if(p.image)return `<div class="cover cover-${p.cover}"><img class="screenshot" src="${p.image}" alt="${p.title}网站截图" width="1440" height="900" loading="lazy"></div>`;return '';}
+function renderCover(p){if(p.featured)return `<div class="cover cover-essay"><img src="assets/experience-gaze-cover.png" alt="经验与凝视封面：纸页、凝视与语言的转译" width="1672" height="941" loading="lazy"></div>`;if(p.id==='medtrix')return `<span class="institution medtrix project-mark"><img src="assets/medtrix-logo.png" alt="Medtrix 社团标识" width="1254" height="1254" loading="lazy"></span>`;if(p.cover==='medstack')return `<div class="cover cover-medstack"><img src="assets/medstack.png" alt="Medstack 标志" width="65" height="65" loading="lazy"><div><span class="cover-title">Medstack</span><div class="cover-sub">个人工作台</div></div></div>`;if(p.image)return `<div class="cover cover-${p.cover}"><img class="screenshot" src="${p.image}" alt="${p.title}网站截图" width="1440" height="900" loading="lazy"></div>`;return '';}
 grid.innerHTML=projects.map(p=>`<article class="project-card${p.featured?' project-card-featured':''}" data-category="${p.category}">${p.featured?'<p class="featured-label">主要作品 · 哲学与医学人文</p>':''}${renderCover(p)}<div class="card-top"><h3 class="card-title">${p.title}</h3><span class="status">${p.status}</span></div><p class="card-desc">${p.description}</p>${p.summary?`<p class="card-summary"><span class="abstract-label">摘要</span>${escapeHTML(p.summary)}</p>`:''}<div class="card-bottom"><span class="card-category">${p.number} / ${p.categoryLabel}</span><div class="card-actions">${p.links.length?`<a class="project-link" href="${p.links[0][1]}" target="_blank" rel="noopener noreferrer">${p.id==='medical-language'?'阅读原文':'项目入口'}</a>`:''}<button class="details-button" data-project="${p.id}" aria-label="查看${p.title}项目详情">详情</button></div></div></article>`).join('');
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{const active=b===button;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active)});const filter=button.dataset.filter;let count=0;document.querySelectorAll('.project-card').forEach(card=>{card.hidden=filter!=='all'&&card.dataset.category!==filter;if(!card.hidden)count++});document.querySelector('.result-count').textContent=`${count} 个项目`}));
 const dialog=document.getElementById('project-dialog');let opener;

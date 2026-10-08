@@ -270,3 +270,31 @@ html,body,body *{color:#000!important;font-family:'Times New Roman','SimSun','So
 .project-card-featured{grid-column:span 2;background:#fff}
 @media(max-width:760px){.project-card-featured{grid-column:auto}}
 @media(max-width:520px){.hero-text .affiliation{margin-top:82px}}
+
+/* Fine rectangular frames distinguish the archive's individual entries. */
+.project-card,.essay-excerpt,.experience-list article,.reading-list li{border:1px solid #aaa;border-radius:0;background:#fff}
+.project-card-featured{border-color:#777}
+.essay-excerpt{padding:17px 19px}
+.experience-list article{padding:14px 17px;margin-bottom:12px}
+.experience-list article:last-child{border:1px solid #aaa}
+.reading-list li{padding:14px 17px}
+@media(max-width:760px){.essay-excerpt{padding:15px 17px}.experience-list article{padding:13px 15px}.reading-list li{padding:13px 15px}}
+
+/* A quiet paper palette and editorial composition. */
+:root{--bg:#f7f5ef;--panel:#fffdfa;--line:#d8d2c8}
+body{background:var(--bg)}
+.topbar{background:#f7f5eff5;border-bottom-color:#cfc7ba}
+.hero::before{background:radial-gradient(ellipse at 35% 42%,#e9ddc649,#e9ddc600 72%)}
+.project-card,.essay-excerpt,.experience-list article,.reading-list li{background:var(--panel);border-color:#bdb5a8}
+.project-card-featured,.experience-list article:last-child{border-color:#bdb5a8}
+.project-card:hover{box-shadow:0 7px 20px #3d30200a}
+.experience-list .institution.science{width:1.8rem;height:2.5rem}
+.experience-list .salon-note{margin-top:5px!important}
+.cover{background:#eee9de}
+.project-card-featured{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);column-gap:21px}
+.project-card-featured>.featured-label,.project-card-featured>.card-top,.project-card-featured>.card-desc,.project-card-featured>.card-summary{grid-column:2}
+.project-card-featured>.cover-essay{grid-column:1;grid-row:1/span 4;height:auto;min-height:220px;margin:0;border:0;background:#fcfbf8;align-self:stretch}
+.cover-essay img{width:100%;height:100%;object-fit:contain}
+.project-card-featured>.card-bottom{grid-column:1/-1;padding-top:12px;border-top:1px solid var(--line);margin-top:12px}
+.project-card-featured .card-summary{font-size:.9375rem;line-height:1.85;margin-bottom:0}
+@media(max-width:760px){.project-card-featured{display:flex}.project-card-featured>.cover-essay{order:-1;height:auto;min-height:0;aspect-ratio:1672/941;margin-bottom:15px;flex:none}.project-card-featured>.card-bottom{width:100%}}
