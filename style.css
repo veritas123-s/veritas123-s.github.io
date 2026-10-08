@@ -232,3 +232,47 @@ nav a:focus-visible::after { transform: scaleX(1); }
 .edition-link{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:16px 20px;margin:0 0 32px;border:1px solid var(--line);background:#ffffffa8;font-size:.875rem}.edition-link a{color:var(--accent);border-bottom:1px solid #bcc8d0}.edition-label{font-size:.6875rem;letter-spacing:1px;color:var(--muted)}.edition-source{margin-left:auto;color:var(--muted);font-size:.75rem}@media print{.edition-link{display:none}}
 
 .institution.science{width:2.5rem;height:3.5rem}.institution.science img{width:208.14%;left:-55.29%;top:-3.25%}
+
+/* One typographic system: Latin in Times New Roman, Chinese in Song. */
+:root{--text:#000;--muted:#000;--accent:#000}
+html,body,body *{color:#000!important;font-family:'Times New Roman','SimSun','Songti SC','STSong',serif!important}
+.role-list{margin:16px 0 19px;padding:0;font-size:.9375rem;line-height:1.85}
+.role-list>div{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px;padding:7px 0;border-bottom:1px solid var(--line)}
+.role-list>div:last-child{border:0}.role-list dt,.role-list dd{margin:0}.role-list dd{font-weight:600}
+.salon-note{margin-top:15px!important}
+@media(max-width:520px){.role-list>div{grid-template-columns:1fr;gap:1px;padding:10px 0}.role-list dt{font-size:.8125rem}.role-list dd{font-size:.9375rem}}
+@media print{.role-list{font-size:.75rem;margin:6px 0 9px}.role-list>div{grid-template-columns:155px 1fr;gap:10px;padding:3px 0}.role-list dt,.role-list dd{font-size:.75rem}.salon-note{margin-top:7px!important}}
+.role-identity{display:flex;align-items:center;gap:12px}.role-logo{width:3rem;height:3rem;object-fit:contain;mix-blend-mode:multiply}.role-list>div{align-items:center}@media print{.role-logo{width:1.5rem;height:1.5rem}.role-identity{gap:7px}}
+
+/* A denser archive rhythm, with readable type and original marks. */
+.topbar{padding:18px 0}.hero{padding:36px 0;gap:50px;grid-template-columns:1fr 205px}.portrait{height:265px}
+.hero .eyebrow{margin-bottom:12px}.name-en{margin-bottom:16px}.affiliation{margin-bottom:13px}.profile-links{margin-top:18px}
+.section{padding:28px 0 32px}.section-top{margin-bottom:19px}.updates{padding:23px 0 26px}.update-list a{padding:8px 0}
+.filters{margin-bottom:18px}.project-grid{gap:14px}.project-card{padding:17px 19px;min-height:168px}.cover{height:146px;margin:-17px -19px 16px}.card-desc{margin-bottom:13px;line-height:1.8}.card-top{margin-bottom:7px}.card-actions{gap:14px}
+.about-layout,.resume-grid{grid-template-columns:190px 1fr;gap:28px}.research-item{padding-bottom:15px;margin-bottom:16px}.research-item h3{margin-bottom:5px}
+.writing-grid{gap:28px}.essay-excerpt{padding-top:18px}.essay-excerpt h3{margin-bottom:12px}.essay-excerpt blockquote{line-height:1.9}.essay-meta{margin-top:12px}
+.reading-list{gap:22px}.reading-list li{padding-top:12px}.reading-number{margin-bottom:5px}
+.experience-list article{padding-bottom:16px;margin-bottom:17px;gap:18px}.experience-list h3{margin-bottom:6px}.experience-list p{line-height:1.8}.role-list{margin:10px 0 12px}.role-list>div{padding:5px 0}.role-logo{width:2.5rem;height:2.5rem}.hospital-logo{width:3rem;height:2.4rem;object-fit:contain;mix-blend-mode:multiply;flex-shrink:0}
+.primary,.primary:hover{background:#eef1f4;border-color:#b8c3cc}.skip{background:#fff;border:1px solid #000}
+.article-page{padding:42px 0 60px}.article-meta{margin:16px 0 30px}.article-body{line-height:1.95}.article-body p{margin-bottom:18px}.article-body h2{margin:34px 0 18px}
+@media(min-width:1100px){.project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.hero{grid-template-columns:1fr 150px;gap:25px;padding:32px 0}.portrait{height:205px}.about-layout,.resume-grid{grid-template-columns:1fr;gap:19px}.section{padding:25px 0 28px}.project-card{min-height:155px}.writing-grid{gap:22px}.reading-list{gap:10px}.reading-list li{padding-top:10px}}
+@media(max-width:520px){.hero{grid-template-columns:1fr;gap:22px}.portrait{top:32px;width:115px;height:150px}.hero-text .affiliation{margin-top:42px}.project-card{padding:16px 18px}.cover{margin:-16px -18px 15px}.role-list>div{padding:7px 0}.role-logo{width:2.25rem;height:2.25rem}}
+@media(max-width:380px){.portrait{width:105px;height:145px}}
+.institution.medtrix{width:8.3rem;height:2rem}.institution.medtrix img{width:117.42%;left:-9.36%;top:-191.02%}.project-mark{margin-bottom:13px}.club-note{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:12px 0 8px}.club-note p{margin:0}.role-list .institution.science{width:1.8rem;height:2.5rem}
+@media print{
+  @page{size:A4;margin:14mm}
+  .resume{padding:0}.resume-grid{grid-template-columns:142px 1fr;gap:25px}.section-top{margin-bottom:16px}
+  .experience-list article{padding-bottom:8px;margin-bottom:10px;gap:15px}.experience-list h3{font-size:10.5pt;line-height:1.4;margin-bottom:4px}.experience-list p{font-size:9pt;line-height:1.65;margin-bottom:4px}.experience-meta{font-size:7.5pt;line-height:1.4}
+  .institution-heading{gap:9px}.institution.science{width:1.65rem;height:2.2rem}.hospital-logo{width:2.2rem;height:1.7rem}.role-list{font-size:9pt;margin:5px 0 8px;line-height:1.5}.role-list>div{padding:3px 0;gap:10px;grid-template-columns:148px 1fr}.role-list dt,.role-list dd{font-size:9pt}.role-logo{width:1.5rem;height:1.5rem}.salon-note{margin-top:5px!important}
+  .resume-sidebar h3{font-size:18pt}.resume-sidebar p.resume-school{margin:12px 0}.resume-institution{gap:8px}.article-page{padding:0}.article-body{line-height:1.8}
+  .role-list .institution.science{width:1.2rem;height:1.65rem}.institution.medtrix{width:6.2rem;height:1.5rem}.club-note{gap:10px;margin:6px 0}
+}
+
+.experience-list article>div{flex:1;min-width:0}.position-line{font-weight:600}.experience-list .role-list{margin:7px 0}.experience-list .role-list>div{padding:6px 0}
+@media screen{.experience-list article{padding-bottom:14px;margin-bottom:16px}.experience-list .institution-heading{min-height:2.5rem}}
+@media print{.experience-list .role-list{margin:4px 0}.experience-list .role-list>div{padding:2px 0}.experience-list article{padding-bottom:7px;margin-bottom:8px}}
+@media screen and (max-width:520px){.hero-text .affiliation{margin-top:64px}}
+
+.profile-roles{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:5px;font-size:.9375rem;line-height:1.8}.profile-roles li{margin:0}.research-participation{margin-top:7px!important}
+@media screen and (max-width:520px){.hero-text .affiliation{margin-top:88px}.profile-roles{margin-top:15px;font-size:.9375rem;gap:7px}}
