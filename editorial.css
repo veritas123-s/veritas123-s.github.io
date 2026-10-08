@@ -1,0 +1,6 @@
+/* Final paper layout and original institutional marks. */
+.project-card-featured{grid-column:1/-1;grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);column-gap:24px}
+.institution{background:transparent;mix-blend-mode:normal}
+.brand-logo,.institution img,.role-logo,.hospital-logo,.cover-medstack img{mix-blend-mode:multiply;background:transparent}
+.experience-list .institution.science{width:1.8rem;height:2.5rem}
+.experience-list .salon-note{margin-top:5px!important}

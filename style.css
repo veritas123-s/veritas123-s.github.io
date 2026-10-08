@@ -289,16 +289,10 @@ body{background:var(--bg)}
 .project-card-featured,.experience-list article:last-child{border-color:#bdb5a8}
 .project-card:hover{box-shadow:0 7px 20px #3d30200a}
 .cover{background:#eee9de}
-.project-card-featured{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr);column-gap:24px}
+.project-card-featured{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);column-gap:21px}
 .project-card-featured>.featured-label,.project-card-featured>.card-top,.project-card-featured>.card-desc,.project-card-featured>.card-summary{grid-column:2}
 .project-card-featured>.cover-essay{grid-column:1;grid-row:1/span 4;height:auto;min-height:220px;margin:0;border:0;background:#fcfbf8;align-self:stretch}
 .cover-essay img{width:100%;height:100%;object-fit:contain}
 .project-card-featured>.card-bottom{grid-column:1/-1;padding-top:12px;border-top:1px solid var(--line);margin-top:12px}
 .project-card-featured .card-summary{font-size:.9375rem;line-height:1.85;margin-bottom:0}
 @media(max-width:760px){.project-card-featured{display:flex}.project-card-featured>.cover-essay{order:-1;height:auto;min-height:0;aspect-ratio:1672/941;margin-bottom:15px;flex:none}.project-card-featured>.card-bottom{width:100%}}
-
-/* White logo grounds blend into the paper without changing the source marks. */
-.institution{background:transparent;mix-blend-mode:normal}
-.brand-logo,.institution img,.role-logo,.hospital-logo,.cover-medstack img{mix-blend-mode:multiply;background:transparent}
-.experience-list .institution.science{width:1.8rem;height:2.5rem}
-.experience-list .salon-note{margin-top:5px!important}
