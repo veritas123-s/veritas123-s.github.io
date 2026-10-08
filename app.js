@@ -1,7 +1,7 @@
 const projects = [
   {
     "id": "multiagent",
-    "number": "15",
+    "number": "16",
     "title": "多 Agent · 科研工作流探索",
     "category": "research",
     "categoryLabel": "医学科研",
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     "id": "medstack",
-    "number": "01",
+    "number": "02",
     "title": "Medstack · 医栈通",
     "category": "product",
     "categoryLabel": "数字产品",
@@ -53,7 +53,7 @@ const projects = [
   },
   {
     "id": "shanhai",
-    "number": "02",
+    "number": "03",
     "title": "山海有回声",
     "category": "practice",
     "categoryLabel": "公共实践",
@@ -82,7 +82,7 @@ const projects = [
   },
   {
     "id": "path",
-    "number": "03",
+    "number": "04",
     "title": "PATH · 医途配方",
     "category": "product",
     "categoryLabel": "数字产品",
@@ -110,7 +110,7 @@ const projects = [
   },
   {
     "id": "liuan",
-    "number": "04",
+    "number": "05",
     "title": "博医 · 六安宣教原型",
     "category": "practice",
     "categoryLabel": "公共实践",
@@ -138,7 +138,7 @@ const projects = [
   },
   {
     "id": "clinical",
-    "number": "05",
+    "number": "06",
     "title": "临床交叉研究",
     "category": "research",
     "categoryLabel": "医学科研",
@@ -160,7 +160,7 @@ const projects = [
   },
   {
     "id": "imaging",
-    "number": "06",
+    "number": "07",
     "title": "影像与转化研究",
     "category": "research",
     "categoryLabel": "医学科研",
@@ -182,7 +182,7 @@ const projects = [
   },
   {
     "id": "omics",
-    "number": "07",
+    "number": "08",
     "title": "组学与计算分析",
     "category": "research",
     "categoryLabel": "医学科研",
@@ -205,7 +205,7 @@ const projects = [
   },
   {
     "id": "poseidon",
-    "number": "08",
+    "number": "09",
     "title": "Poseidon · 工具型助手",
     "category": "product",
     "categoryLabel": "数字产品",
@@ -233,7 +233,7 @@ const projects = [
   },
   {
     "id": "daily",
-    "number": "09",
+    "number": "10",
     "title": "每日助手 · 提醒工作流",
     "category": "product",
     "categoryLabel": "数字产品",
@@ -256,7 +256,7 @@ const projects = [
   },
   {
     "id": "literature",
-    "number": "10",
+    "number": "11",
     "title": "文献雷达 · 阅读工作流",
     "category": "research",
     "categoryLabel": "医学科研",
@@ -279,7 +279,7 @@ const projects = [
   },
   {
     "id": "medtrix",
-    "number": "11",
+    "number": "12",
     "title": "Medtrix · 社团筹建",
     "category": "practice",
     "categoryLabel": "公共实践",
@@ -302,7 +302,7 @@ const projects = [
   },
   {
     "id": "extraction",
-    "number": "12",
+    "number": "13",
     "title": "PDF · 化合物信息提取",
     "category": "experiment",
     "categoryLabel": "学习实验",
@@ -325,7 +325,7 @@ const projects = [
   },
   {
     "id": "mnist",
-    "number": "13",
+    "number": "14",
     "title": "MNIST · 手写数字识别",
     "category": "experiment",
     "categoryLabel": "学习实验",
@@ -348,7 +348,7 @@ const projects = [
   },
   {
     "id": "focus",
-    "number": "14",
+    "number": "15",
     "title": "国策树 · 番茄钟探索",
     "category": "experiment",
     "categoryLabel": "学习实验",
@@ -371,13 +371,13 @@ const projects = [
   },
   {
     "id": "medical-language",
-    "number": "16",
-    "title": "医学语言学与符号学",
+    "number": "01",
+    "title": "经验与凝视",
     "category": "research",
-    "categoryLabel": "医学人文",
+    "categoryLabel": "哲学与医学人文",
     "status": "研究札记",
-    "description": "考察患者经验向临床知识转译的过程，以及医学语言中的形成、断裂与弥合。",
-    "intro": "以福柯《临床医学的诞生》为线索，考察患者经验向临床知识转译的过程，讨论症状、病历与技术凝视的符号机制，以及叙事医学和 AI 对医患沟通的影响。",
+    "description": "浅谈现代临床语言的形成、断裂与弥合。",
+    "intro": "从患者经验向临床知识的转译出发，考察医学语言的形成、断裂与弥合。",
     "work": [
       "从福柯《临床医学的诞生》讨论苦痛与症状的关系。",
       "考察病历、医患沟通与临床知识的符号机制。",
@@ -394,14 +394,15 @@ const projects = [
       "Medical humanities",
       "Linguistics",
       "Semiotics"
-    ]
+    ],
+    "featured": true
   }
 ];
 projects.sort((a,b)=>Number(a.number)-Number(b.number));
 const grid=document.getElementById('project-grid');
 const escapeHTML=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function renderCover(p){if(p.id==='medtrix')return `<span class="institution medtrix project-mark"><img src="assets/medtrix-logo.png" alt="Medtrix 社团标识" width="1254" height="1254" loading="lazy"></span>`;if(p.cover==='medstack')return `<div class="cover cover-medstack"><img src="assets/medstack.png" alt="Medstack 标志" width="65" height="65" loading="lazy"><div><span class="cover-title">Medstack</span><div class="cover-sub">个人工作台</div></div></div>`;if(p.image)return `<div class="cover cover-${p.cover}"><img class="screenshot" src="${p.image}" alt="${p.title}网站截图" width="1440" height="900" loading="lazy"></div>`;return '';}
-grid.innerHTML=projects.map(p=>`<article class="project-card" data-category="${p.category}">${renderCover(p)}<div class="card-top"><h3 class="card-title">${p.title}</h3><span class="status">${p.status}</span></div><p class="card-desc">${p.description}</p><div class="card-bottom"><span class="card-category">${p.number} / ${p.categoryLabel}</span><div class="card-actions">${p.links.length?`<a class="project-link" href="${p.links[0][1]}" target="_blank" rel="noopener noreferrer">${p.id==='medical-language'?'阅读原文':'项目入口'}</a>`:''}<button class="details-button" data-project="${p.id}" aria-label="查看${p.title}项目详情">详情</button></div></div></article>`).join('');
+grid.innerHTML=projects.map(p=>`<article class="project-card${p.featured?' project-card-featured':''}" data-category="${p.category}">${p.featured?'<p class="featured-label">主要作品 · 哲学与医学人文</p>':''}${renderCover(p)}<div class="card-top"><h3 class="card-title">${p.title}</h3><span class="status">${p.status}</span></div><p class="card-desc">${p.description}</p><div class="card-bottom"><span class="card-category">${p.number} / ${p.categoryLabel}</span><div class="card-actions">${p.links.length?`<a class="project-link" href="${p.links[0][1]}" target="_blank" rel="noopener noreferrer">${p.id==='medical-language'?'阅读原文':'项目入口'}</a>`:''}<button class="details-button" data-project="${p.id}" aria-label="查看${p.title}项目详情">详情</button></div></div></article>`).join('');
 document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(b=>{const active=b===button;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active)});const filter=button.dataset.filter;let count=0;document.querySelectorAll('.project-card').forEach(card=>{card.hidden=filter!=='all'&&card.dataset.category!==filter;if(!card.hidden)count++});document.querySelector('.result-count').textContent=`${count} 个项目`}));
 const dialog=document.getElementById('project-dialog');let opener;
 grid.addEventListener('click',event=>{const button=event.target.closest('[data-project]');if(!button)return;const p=projects.find(p=>p.id===button.dataset.project);opener=button;document.getElementById('detail-content').innerHTML=`<div class="detail-tags">${p.number} / ${p.categoryLabel} · ${p.status}</div><h2 id="detail-title">${p.title}</h2><p>${p.intro}</p>${p.image?`<img class="detail-image" src="${p.image}" alt="${p.title}网站截图">`:''}<h3>项目内容</h3><ul>${p.work.map(x=>`<li>${escapeHTML(x)}</li>`).join('')}</ul><div class="interest-tags">${p.tags.map(x=>`<span>${escapeHTML(x)}</span>`).join('')}</div><p class="detail-note">${p.note}</p><div class="detail-links">${p.links.map(([label,url])=>`<a class="pill primary" href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`).join('')}</div>`;dialog.showModal();dialog.scrollTop=0;document.body.classList.add('dialog-open')});
