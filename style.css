@@ -230,3 +230,5 @@ nav a:focus-visible::after { transform: scaleX(1); }
 @media(max-width:850px){.article-page{max-width:calc(100% - 42px);padding:40px 0 60px}.article-page h1{font-size:1.65rem}.article-body{font-size:1rem;line-height:2.05}}
 @media print{.writing,.reading,.reading-progress{display:none!important}.article-page{max-width:none;padding:0}.article-page h1{font-size:18pt}.article-body{font-size:11pt;line-height:1.8}.article-body h2{break-after:avoid;font-size:13pt}.article-return{display:none}}
 .edition-link{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:16px 20px;margin:0 0 32px;border:1px solid var(--line);background:#ffffffa8;font-size:.875rem}.edition-link a{color:var(--accent);border-bottom:1px solid #bcc8d0}.edition-label{font-size:.6875rem;letter-spacing:1px;color:var(--muted)}.edition-source{margin-left:auto;color:var(--muted);font-size:.75rem}@media print{.edition-link{display:none}}
+
+.institution.science{width:2.5rem;height:3.5rem}.institution.science img{width:208.14%;left:-55.29%;top:-3.25%}
