@@ -6,3 +6,19 @@
 .experience-list .salon-note{margin-top:5px!important}
 .logo-filters{position:absolute;inline-size:0;block-size:0;pointer-events:none}
 .institution.school img{filter:url("#logo-white-transparent");mix-blend-mode:normal}
+
+.profile-honors {
+  list-style: none;
+  padding: 8px 0 8px 12px;
+  margin: 0 0 14px;
+  border-left: 2px solid currentColor;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.association-mark { width: 3.1rem; height: 3.1rem; object-fit: contain; mix-blend-mode: multiply; margin-bottom: 12px; }
+.older-updates { margin-top: 10px; }
+.older-updates summary { width: fit-content; cursor: pointer; padding: 5px 0; font-size: .9375rem; }
+.project-card[id], #boyi-experience { scroll-margin-top: 6rem; }
+.keep-together { display: inline-block; }
+.profile-honors a { text-decoration: underline; text-underline-offset: .2em; }
+@media (min-width: 521px) { .update-list a { grid-template-columns: 110px minmax(0, 1fr) 5rem; } }
