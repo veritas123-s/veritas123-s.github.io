@@ -1,0 +1,42 @@
+name: Refresh public contribution calendar
+
+on:
+  schedule:
+    - cron: '23 2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/scripts/refresh_activity.py'
+      - '.github/workflows/refresh-activity.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-activity-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Read the public GitHub calendar
+        run: python3 .github/scripts/refresh_activity.py --output "$RUNNER_TEMP/activity-data.json"
+      - name: Update the activity-data branch
+        run: |
+          git fetch --depth=1 origin refs/heads/activity-data
+          git switch --create activity-data FETCH_HEAD
+          cp "$RUNNER_TEMP/activity-data.json" activity-data.json
+          git add -- activity-data.json
+          if git diff --cached --quiet; then
+            echo "The published calendar is current."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh public contribution calendar' -- activity-data.json
+          git push origin HEAD:refs/heads/activity-data
